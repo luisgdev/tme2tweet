@@ -6,10 +6,10 @@ import os
 
 
 # IMPORTANTE Get these keys from https://developer.twitter.com/
-consumer_key = ''
-consumer_secret = ''
-access_token = ''
-access_token_secret = ''
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 # Validate the keys in order to use the API
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -20,10 +20,10 @@ api = tweepy.API(auth)
 def tweet_text(text):
     # Tweeting text only
     try:
-        response = api.update_status(status = text)
-        print('Tweeted: {}'.format(response._json['text']))
+        response = api.update_status(status=text)
+        print("Tweeted: {}".format(response._json["text"]))
     except Exception as e:
-        print('Error: {}'.format(e))
+        print("Error: {}".format(e))
 
 
 def tweet_media(text, folder, name):
@@ -31,18 +31,16 @@ def tweet_media(text, folder, name):
     media_path = os.path.join(folder, name)
     try:
         response = api.update_with_media(media_path, text)
-        print('Tweeted: {}'.format(response._json['text']))
+        print("Tweeted: {}".format(response._json["text"]))
     except Exception as e:
-        print('Error: {}'.format(e))
+        print("Error: {}".format(e))
 
 
 def tweets_hour(n):
     # Returns time in seconds between channel checking
-    seconds = 3600/n
+    seconds = 3600 / n
     return seconds
 
 
-if __name__ == '__main__':
-    print('Hello!')
-    tweet_text('Lorem ipsum')
-    tweet_media('#Landscape', os.path.join('img', 'image.jpg'))
+if __name__ == "__main__":
+    print("This is not main!")

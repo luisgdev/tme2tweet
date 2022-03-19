@@ -1,2 +1,4 @@
-# tme2tweet
-This bot takes posts from a public telegram channel and post them on Twitter.
+# Tme2Tweet
+
+Post media content from a public telegram channel on Twitter.
+
